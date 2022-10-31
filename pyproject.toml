@@ -5,6 +5,7 @@ description = "Calculate word counts in a text file !"
 authors = ["Ugochukwu Onyebuchi"]
 license = "MIT"
 readme = "README.md"
+include = ["tests/*", "CHANGELOG.md"]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
@@ -19,7 +20,11 @@ jupyter = "^1.0.0"
 myst-nb = {version = "^0.17.1", python = "^3.9"}
 sphinx-autoapi = "^2.0.0"
 sphinx-rtd-theme = "^1.0.0"
+python-semantic-release = "^7.32.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = "pyproject_ugo.toml:version"
